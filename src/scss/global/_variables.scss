@@ -1,0 +1,19 @@
+@font-face {
+  font-family: "MadScientist";
+  src: url("../fonts/MADSCIENTIST.TTF") format("truetype");
+  font-display: swap;
+}
+
+// 英語フォント
+$ff-madscientist: "MadScientist", sans-serif;
+$ff-dela-gothic-one: "Dela Gothic One", sans-serif;
+
+// ブレイクポイント
+$bp-sp: 767px;  // SP 〜767px
+$bp-pc: 768px;  // PC 768px〜
+
+// weight指定
+$base-font-light: 300;
+$base-font-regular: 400;
+$base-font-medium: 500;
+$base-font-bold: 700;

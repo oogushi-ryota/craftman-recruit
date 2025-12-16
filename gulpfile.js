@@ -9,6 +9,7 @@ import concat from "gulp-concat";
 import browserSyncLib from "browser-sync";
 import esbuild from "gulp-esbuild"; // ✅ `esbuild` を追加
 import webp from "gulp-webp"; // ✅ WebP変換用
+import sourcemaps from "gulp-sourcemaps";
 
 const browserSync = browserSyncLib.create();
 const sass = gulpSass(dartSass);
@@ -17,9 +18,11 @@ const { src, dest, watch, series, parallel } = gulp;
 // **SCSSコンパイル**
 function styles() {
   return src("src/scss/style.scss", { allowEmpty: true })
-    .pipe(sass({ includePaths: ["node_modules"] }).on("error", sass.logError)) // ← ★ ここ追加！
+    .pipe(sourcemaps.init())
+    .pipe(sass({ includePaths: ["node_modules"] }).on("error", sass.logError))
     .pipe(cleanCSS())
     .pipe(rename({ suffix: ".min" }))
+    .pipe(sourcemaps.write("."))
     .pipe(dest("dist/assets/css"))
     .pipe(browserSync.stream());
 }

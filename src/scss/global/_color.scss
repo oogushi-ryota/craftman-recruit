@@ -1,0 +1,34 @@
+@use "sass:map";
+
+// デフォルトの色
+$base-font-color: #222;
+$base-bg-color: #FFF;
+
+// パレットの定義
+$color-palette: (
+  yel: (
+    base : #F8F03E,
+  ),
+  beige : (
+    light : #FFFAF5,
+    base : #DCCFBE,
+    mid : #C8BBAA, 
+    dark  : #C6B7A3, 
+  ),
+  rd : (
+    base : #E8380D,
+  ),
+  wt : (
+    base : #FFF,
+    light : #FBFBFB,
+  ),
+  bk : (
+    base : #050505,
+    dark : #000,
+  ),
+) !default;
+
+// color(色系統, トーン)
+@function color($color, $tone:base) {
+  @return map.get(map.get($color-palette, $color), $tone);
+}
