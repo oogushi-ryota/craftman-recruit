@@ -1,12 +1,13 @@
 @font-face {
   font-family: "MadScientist";
-  src: url("../fonts/MADSCIENTIST.TTF") format("truetype");
+  src: url("../fonts/CCMadScientist-Bold.ttf") format("truetype");
   font-display: swap;
 }
 
 // 英語フォント
 $ff-madscientist: "MadScientist", sans-serif;
 $ff-dela-gothic-one: "Dela Gothic One", sans-serif;
+$ff-murecho: "Murecho", sans-serif;
 
 // ブレイクポイント
 $bp-sp: 767px;  // SP 〜767px

@@ -1,0 +1,293 @@
+@use "global/variables" as *;
+@use "global/mixins" as *;
+@use "global/color" as *;
+
+.p-about {
+  & {
+    padding: 41.1rem 0 14.6rem;
+
+    @include sp {
+      padding: 36rem 0 12.8rem;
+    }
+
+    &__txtblk {
+      top: -6rem;
+    }
+
+    &__txt-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      @include sp {
+        display: block; 
+      }
+    }
+
+    &__ttl-wrap {
+      align-items: flex-start;
+    }
+
+    &__txt {
+      font-size: 2rem;
+      line-height: 180%;
+      width: 83rem;
+
+      @include sp {
+        font-size: 1.6rem;
+        width: 100%;
+        margin-top: 2.4rem;
+      }
+    }
+
+    &__cont {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @include sp {
+        display: block;
+      }
+    }
+
+    &__img-inner {
+      position: relative;
+
+      &::before {
+        color: color(wt,base);
+        font-family: $ff-madscientist;
+        font-size: 3.2rem;
+        font-weight: $base-font-bold;
+        letter-spacing: .05em;
+        width: 20rem;
+        height: 6rem;
+        background-color: $base-font-color;
+        border-radius: 100vmax;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        z-index: 2;
+
+        @include sp {
+          font-size: 2rem;
+          width: 12rem;
+          height: 3.4rem;
+        }
+      }
+
+      &::after {
+        content: "";
+        display: block;
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: absolute;
+        z-index: 1;
+      }
+
+      &--left {
+        left: 3rem;
+
+        @include sp {
+          left: 0;
+        }
+
+        &::before {
+          content: "BEFORE";
+          top: -2.5rem;
+          left: 4rem;
+
+          @include sp {
+            top: -1.5rem;
+            left: 2rem;
+          }
+        }
+
+        &::after {
+          width: 33.2rem;
+          height: 28.1rem;
+          background-image: url(../img/about/about_obj01.svg);
+          bottom: -10.7rem;
+          left: -17.2rem;
+
+          @include sp {
+            width: 25.6rem;
+            height: 14.2rem;
+            background-image: url(../img/about/about_obj02.svg);
+            top: -13.1rem;
+            bottom: unset;
+            left: unset;
+            right: 0;
+          }
+        }
+      }
+
+      &--right {
+        right: 3rem;
+
+        @include sp {
+          margin-top: -2rem;
+          right: 0;
+        }
+
+        &::before {
+          content: "AFTER";
+          top: -2.5rem;
+          left: 12rem;
+
+          @include sp {
+            top: unset;
+            bottom: -1.5rem;
+            left: unset;
+            right: 2rem;
+          }
+        }
+
+        &::after {
+          width: 51.8rem;
+          height: 28.9rem;
+          background-image: url(../img/about/about_obj02.svg);
+          top: -26.6rem;
+          right: 0;
+
+          @include sp {
+            width: 12.4rem;
+            height: 10.5rem;
+            background-image: url(../img/about/about_obj01.svg);
+            top: 3.1rem;
+            left: -3.7rem;
+            right: unset;
+          }
+        }
+      }
+    }
+
+    &__img-wrap {
+      width: 75rem;
+      background-color: $base-font-color;
+      padding: .9rem 1.2rem .9rem .9rem;
+      position: relative;
+
+      @include sp {
+        width: 100%;
+        padding: .6rem;
+      }
+
+      &--left {
+        clip-path: polygon(
+          0 0,     /* 左上 */
+          100% 0,   /* 右上（そのまま） */
+          90% 100%, /* 右下：内側に */
+          0 100%    /* 左下 */
+        );
+
+        @include sp {
+          clip-path: polygon(
+            0 0,     /* 左上 */
+            100% 0,   /* 右上（そのまま） */
+            100% 90%, /* 右下：内側に */
+            0 100%    /* 左下 */
+          );
+        }
+      }
+
+      &--right {
+        clip-path: polygon(
+          10% 0,     /* 左上 */
+          100% 0,   /* 右上（そのまま） */
+          100% 100%, /* 右下：内側に */
+          0 100%    /* 左下 */
+        );
+
+        @include sp {
+          clip-path: polygon(
+            0 10%,     /* 左上 */
+            100% 0,   /* 右上（そのまま） */
+            100% 100%, /* 右下：内側に */
+            0 100%    /* 左下 */
+          );
+        }
+      }
+    }
+
+    &__cont-img {
+      &--left {
+        clip-path: polygon(
+          0 0,     /* 左上 */
+          100% 0,   /* 右上（そのまま） */
+          90% 100%, /* 右下：内側に */
+          0 100%    /* 左下 */
+        );
+
+        @include sp {
+          clip-path: polygon(
+            0 0,     /* 左上 */
+            100% 0,   /* 右上（そのまま） */
+            100% 90%, /* 右下：内側に */
+            0 100%    /* 左下 */
+          );
+        }
+      }
+
+      &--right {
+        clip-path: polygon(
+          10% 0,     /* 左上 */
+          100% 0,   /* 右上（そのまま） */
+          100% 100%, /* 右下：内側に */
+          0 100%    /* 左下 */
+        );
+
+        @include sp {
+          clip-path: polygon(
+            0 10%,     /* 左上 */
+            100% 0,   /* 右上（そのまま） */
+            100% 100%, /* 右下：内側に */
+            0 100%    /* 左下 */
+          );
+        }
+      }
+    }
+
+    &__cont-txtblk {
+      width: 71.8rem;
+      height: 16.2rem;
+      margin: 8rem auto 0;
+      padding-top: 2.4rem;
+      background-image: url(../img/about/txt-bg.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      position: relative;
+      z-index: 2;
+
+      @include sp {
+        width: 100%;
+        height: 16rem;
+        background-image: url(../img/about/txt-bg-sp.svg);
+        margin-top: 5.6rem;
+        padding-top: 2.7rem;
+      }
+    }
+
+    &__cont-txt {
+      color: color(blu,base);
+      font-family: $ff-murecho;
+      font-weight: 700;
+      font-size: 2.2rem;
+      line-height: 150%;
+      text-align: center;
+      text-shadow: 1px 1px 0 color(wt,base), -1px -1px 0 color(wt,base),
+                  -1px 1px 0 color(wt,base), 1px -1px 0 color(wt,base),
+                  1px 0 0 color(wt,base), -1px 0 0 color(wt,base),
+                  0 1px 0 color(wt,base), 0 -1px 0 color(wt,base);
+
+      em {
+        color: color(rd,base);
+        font-style: normal;
+      }
+
+      @include sp {
+        font-size: 1.6rem;
+      }
+    }
+  }
+}

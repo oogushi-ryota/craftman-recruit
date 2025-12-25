@@ -1,0 +1,95 @@
+@use "global/variables" as *;
+@use "global/mixins" as *;
+@use "global/color" as *;
+
+.c-txt-wrap {
+  & {
+    width: 100%;
+    background-color: $base-font-color;
+    padding: 1rem 0;
+    position: absolute;
+
+    @include sp {
+      padding: .6rem 0;
+    }
+
+    &--right {
+      clip-path: polygon(
+        0% 0%,    /* 左上 */
+        100% 20%,  /* 右上（細い） */
+        100% 80%,/* 右下 */
+        0% 100%    /* 左下 */
+      );
+
+      @include sp {
+        clip-path: polygon(
+          0% 0%,    /* 左上 */
+          100% 8%,  /* 右上（細い） */
+          100% 92%,/* 右下 */
+          0% 100%    /* 左下 */
+        );
+      }
+    }
+
+    &--left {
+      clip-path: polygon(
+        0% 20%,    /* 左上 */
+        100% 0%,  /* 右上（細い） */
+        100% 100%,/* 右下 */
+        0% 80%    /* 左下 */
+      );
+
+      @include sp {
+        clip-path: polygon(
+          0% 8%,    /* 左上 */
+          100% 0%,  /* 右上（細い） */
+          100% 100%,/* 右下 */
+          0% 92%    /* 左下 */
+        );
+      }
+    }
+
+    &__inner {
+      background-color: color(wt,base);
+      padding: 10.2rem 25rem;
+
+      &--right {
+        clip-path: polygon(
+          0% 0%,    /* 左上 */
+          100% 20%,  /* 右上（細い） */
+          100% 80%,/* 右下 */
+          0% 100%    /* 左下 */
+        );
+
+        @include sp {
+          padding: 7.2rem 2rem;
+          clip-path: polygon(
+            0% 0%,    /* 左上 */
+            100% 8%,  /* 右上（細い） */
+            100% 92%,/* 右下 */
+            0% 100%    /* 左下 */
+          );
+        }
+      }
+
+      &--left {
+        clip-path: polygon(
+          0% 20%,    /* 左上 */
+          100% 0%,  /* 右上（細い） */
+          100% 100%,/* 右下 */
+          0% 80%    /* 左下 */
+        );
+
+        @include sp {
+          padding: 7.2rem 2rem;
+          clip-path: polygon(
+            0% 8%,    /* 左上 */
+            100% 0%,  /* 右上（細い） */
+            100% 100%,/* 右下 */
+            0% 92%    /* 左下 */
+          );
+        }
+      }
+    }
+  }
+}

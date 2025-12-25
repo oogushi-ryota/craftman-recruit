@@ -8,23 +8,19 @@ $base-bg-color: #FFF;
 $color-palette: (
   yel: (
     base : #F8F03E,
-  ),
-  beige : (
-    light : #FFFAF5,
-    base : #DCCFBE,
-    mid : #C8BBAA, 
-    dark  : #C6B7A3, 
+    dark : #F6AC0C,
   ),
   rd : (
-    base : #E8380D,
+    base : #EA3A20,
+    vivid : #EB281F,
   ),
   wt : (
     base : #FFF,
-    light : #FBFBFB,
   ),
-  bk : (
-    base : #050505,
-    dark : #000,
+  blu : (
+    base : #23479F,
+    soft : #6090FF,
+    vivid :#27AED3,
   ),
 ) !default;
 

@@ -1,0 +1,335 @@
+@use "global/variables" as *;
+@use "global/mixins" as *;
+@use "global/color" as *;
+
+.p-environment {
+  & {
+    padding: 36rem 0 22.3rem;
+
+    @include sp {
+      padding: 32rem 0 21.1rem;
+    }
+
+    &__txtblk {
+      top: -12rem;
+
+      @include sp {
+        top: -7.4rem;
+      }
+    }
+
+    &__sec {
+      padding: 14rem 12.4rem 9rem;
+      background-color: $base-bg-color;
+      border: solid 1rem $base-font-color;
+      position: relative;
+      z-index: 2;
+
+      @include sp {
+        padding: 7.5rem 1.4rem 5.6rem;
+        border: solid .6rem $base-font-color;
+      }
+
+      &:not(:first-of-type) {
+        margin-top: 18.7rem;
+
+        @include sp {
+          margin-top: 9rem;
+        }
+      }
+    }
+
+    &__sec-ttl {
+      font-family: $ff-dela-gothic-one;
+      font-size: 4.8rem;
+      font-weight: $base-font-regular;
+      line-height: 100%;
+      letter-spacing: .05em;
+      text-align: center;
+      width: 65rem;
+      height: 21.1rem;
+      background-repeat: no-repeat;
+      background-size: contain;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: -10.7rem;
+      left: 50%;
+      transform: translateX(-50%);
+      -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+
+      &--teamwork {
+        background-image: url(../img/environment/ttl_obj01.svg);
+      }
+
+      &--benefits {
+        background-image: url(../img/environment/ttl_obj02.svg);
+      }
+
+      &--worklife {
+        font-size: 4.2rem;
+        background-image: url(../img/environment/ttl_obj03.svg);
+
+        @include sp {
+          font-size: 2rem !important;
+        }
+      }
+
+      @include sp {
+        font-size: 2.4rem;
+        width: 29.9rem;
+        height: 9.7rem;
+        top: -5rem;
+      }
+    }
+
+    &__teamwork {
+      padding: 7.2rem 12.4rem 0 1rem;
+
+      @include sp {
+        padding: 7rem 0 0;
+      }
+
+      &::before,
+      &::after {
+        content: "";
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: absolute;
+        z-index: 2;
+      }
+
+      &::before {
+        width: 11.3rem;
+        height: 17.1rem;
+        background-image: url(../img/environment/teamwork_obj01.svg);
+        top: -13.6rem;
+        left: .9rem;
+
+        @include sp {
+          width: 6.2rem;
+          height: 9.3rem;
+          top: -6.5rem;
+          left: -2.3rem;
+        }
+      }
+
+      &::after {
+        width: 7.9rem;
+        height: 7.7rem;
+        background-image: url(../img/environment/teamwork_obj02.svg);
+        bottom: -14.2rem;
+        left: -8.8rem;
+
+        @include sp {
+          width: 4rem;
+          height: 3.9rem;
+          bottom: -4.5rem;
+          left: -2.8rem;
+        }
+      }
+    }
+
+    &__teamwork-wrap {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: 1rem;
+
+      @include sp {
+        flex-direction: column-reverse;
+        gap: 1.8rem;
+      }
+    }
+
+    &__teamwork-img {
+      width: 70.8rem;
+
+      @include sp {
+        width: 100%;
+      }
+    }
+
+    &__txtarea {
+      width: 57.2rem;
+
+      @include sp {
+        width: 100%;
+        padding: 0 1.4rem;
+      }
+
+      &--teamwork {
+        margin-top: 10rem;
+
+        @include sp {
+          margin-top: unset;
+        }
+      }
+    }
+
+    &__blk-ttl {
+      font-family: $ff-murecho;
+      font-weight: $base-font-bold;
+      font-size: 3.2rem;
+      line-height: 140%;
+
+      @include sp {
+        font-size: 1.8rem;
+        text-align: center;
+      }
+    }
+
+    &__benefits {
+      &::after {
+        content: "";
+        width: 14.7rem;
+        height: 13.2rem;
+        background-image: url(../img/environment/benefits_obj.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: absolute;
+        top: -7rem;
+        right: .8rem;
+
+        @include sp {
+          width: 5.7rem;
+          height: 5.1rem;
+          top: -2.6rem;
+          right: -1.5rem;
+        }
+      }
+    }
+
+    &__txt {
+      font-size: 1.8rem;
+      line-height: 180%;
+      margin-top: 4rem;
+
+      @include sp {
+        font-size: 1.6rem;
+        margin-top: 1.6rem;
+      }
+    }
+
+    &__wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 4.8rem;
+
+      @include sp {
+        display: block;
+      }
+    }
+
+    &__img {
+      width: 57.2rem;
+      border: solid .8rem $base-font-color;
+      flex-shrink: 0;
+
+      @include sp {
+        width: 100%;
+        border: solid .4rem $base-font-color;
+      }
+
+      & + .p-environment__txtarea {
+        margin-top: 2.4rem;
+      }
+    }
+
+    &__benefits-list {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 3.2rem;
+      margin-top: 4rem;
+
+      @include sp {
+        display: block;
+        margin-top: 3.2rem;
+      }
+    }
+
+    &__benefits-item {
+      @include sp {
+        &:not(:first-of-type) {
+          margin-top: 3.2rem;
+        }
+      }
+    }
+
+    &__item-img {
+      width: 37.6rem;
+      border: solid .8rem $base-font-color;
+
+      @include sp {
+        width: 100%;
+        border: solid .4rem $base-font-color;
+      }
+    }
+
+    &__item-ttl {
+      font-family: $ff-murecho;
+      font-size: 2.4rem;
+      font-weight: $base-font-bold;
+      text-align: center;
+      margin-top: 2.4rem;
+
+      @include sp {
+        font-size: 1.8rem;
+      }
+    }
+
+    &__item-txt {
+      font-size: 1.8rem;
+      line-height: 140%;
+      margin-top: 1.2rem;
+      text-align: center;
+
+      @include sp {
+        font-size: 1.6rem;
+      }
+    }
+
+    &__worklife {
+      &::before,
+      &::after {
+        content: "";
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: absolute;
+      }
+
+      &::before {
+        width: 13.1rem;
+        height: 10.7rem;
+        background-image: url(../img/environment/worklif_obj01.svg);
+        top: -5.9rem;
+        left: 5.4rem;
+
+        @include sp {
+          width: 6rem;
+          height: 4.9rem;
+          top: 3.9rem;
+          left: -1.6rem;
+        }
+      }
+
+      &::after {
+        width: 10.3rem;
+        height: 10.1rem;
+        background-image: url(../img/environment/worklif_obj02.svg);
+        top: -14.3rem;
+        right: 0;
+
+        @include sp {
+          width: 4.5rem;
+          height: 4.5rem;
+          top: -7.4rem;
+          right: -1.1rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+@use "global/variables" as *;
+@use "global/mixins" as *;
+@use "global/color" as *;
+
+.c-subttl {
+  & {
+    font-size: 4rem;
+    font-family: $ff-dela-gothic-one;
+    font-weight: $base-font-regular;
+    line-height: 100%;
+
+    @include sp {
+      font-size: 1.8rem;
+    }
+  }
+}

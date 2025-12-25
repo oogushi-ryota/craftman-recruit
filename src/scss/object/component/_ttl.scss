@@ -1,0 +1,19 @@
+@use "global/variables" as *;
+@use "global/mixins" as *;
+@use "global/color" as *;
+
+.c-ttl {
+  & {
+    font-size: 9.6rem;
+    font-family: $ff-madscientist;
+    font-weight: $base-font-bold;
+    line-height: 100%;
+    letter-spacing: .05em;
+
+    @include sp {
+      font-size: 4.8rem;
+      text-align: center;
+      line-height: 110%;
+    }
+  }
+}

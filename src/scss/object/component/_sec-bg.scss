@@ -1,0 +1,95 @@
+@use "global/variables" as *;
+@use "global/mixins" as *;
+@use "global/color" as *;
+
+.c-sec-bg {
+  & {
+    position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-repeat: repeat-y;
+      background-size: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    &--about {
+      background-color: color(rd,base);
+
+      &::before {
+        background-image: url(../img/about/bg.png);
+
+        @include sp {
+          background-image: url(../img/about/bg-sp.png);
+        }
+      }
+    }
+
+    &--environment {
+      background-color: color(blu,soft);
+
+      &::before {
+        background-image: url(../img/environment/bg.png);
+
+        @include sp {
+          background-image: url(../img/environment/bg-sp.png);
+        }
+      }
+    }
+
+    &--job {
+      background-color: color(rd,base);
+
+      &::before {
+        background-image: url(../img/job/bg.png);
+
+        @include sp {
+          background-image: url(../img/job/bg-sp.png);
+        }
+      }
+    }
+
+    &--exective {
+      background-color: color(blu,soft);
+
+      &::before {
+        background-image: url(../img/exective/bg.png);
+
+        @include sp {
+          background-image: url(../img/exective/bg-sp.png);
+        }
+      }
+    }
+
+    &--company {
+      background-color: color(yel,dark);
+
+      &::before {
+        background-image: url(../img/company/bg.png);
+        opacity: .3;
+
+        @include sp {
+          background-image: url(../img/company/bg-sp.png);
+        }
+      }
+    }
+
+    &--entry {
+      background-color: color(blu,vivid);
+
+      &::before {
+        background-image: url(../img/entry/bg.png);
+        opacity: .3;
+
+        @include sp {
+          background-image: url(../img/entry/bg-sp.png);
+        }
+      }
+    }
+  }
+}
