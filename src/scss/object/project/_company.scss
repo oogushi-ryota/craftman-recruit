@@ -167,12 +167,17 @@
 
     &__td {
       font-size: 1.8rem;
+      line-height: 140%;
       font-weight: $base-font-medium;
 
       @include sp {
         font-size: 1.6rem;
         display: block;
         margin-top: 1.2rem;
+      }
+
+      a {
+        color: $base-font-color;
       }
     }
   }
