@@ -195,7 +195,7 @@ Template Name: トップページ
               </tr>
               <tr class="p-job__tr">
                 <th class="p-job__th">勤務地</th>
-                <td class="p-job__td">本社（◯◯市◯◯）／対応エリア（◯◯市近郊）</td>
+                <td class="p-job__td">本社（東京都東大和市）／対応エリア（一都三県）</td>
               </tr>
               <tr class="p-job__tr">
                 <th class="p-job__th">勤務時間</th>
@@ -205,10 +205,8 @@ Template Name: トップページ
                 <th class="p-job__th">給料</th>
                 <td class="p-job__td">
                   <ul class="p-job__td-list">
-                    <li class="p-job__td-item">・月給：◯◯万〜◯◯万円（経験・能力を考慮の上決定）</li>
-                    <li class="p-job__td-item">・昇給：年1回　／　賞与：年2回</li>
-                    <li class="p-job__td-item">・手当：通勤手当、資格手当、役職手当 ほか</li>
-                    <li class="p-job__td-item">・試用期間：3ヶ月（条件変更がある場合は明記）</li>
+                    <li class="p-job__td-item">・月給：３５万〜１２０万円（経験・能力を考慮の上決定）</li>
+                    <li class="p-job__td-item">・昇給：年1回　／　賞与：完全歩合制</li>
                   </ul>
                 </td>
               </tr>
@@ -314,8 +312,8 @@ Template Name: トップページ
               <tr class="p-company__tr">
                 <th class="p-company__th">資材置き場</th>
                 <td class="p-company__td">
-                  〒207-0003<br>
-                  東京都東大和市高木3-344-1
+                  〒190-1224<br>
+                  東京都西多摩郡瑞穂町南平1丁目8-6
                 </td>
               </tr>
               <tr class="p-company__tr">
